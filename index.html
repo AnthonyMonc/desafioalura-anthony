@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Encriptador Alura Anthony</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="estilos.css">
+
+    <script>
+        function encriptar(){
+
+            var x = document.getElementById('t-encriptado');
+            var mun = document.getElementById('mun');
+            var msj1 = document.getElementById('msj1');            
+            var msj2 = document.getElementById('msj2');            
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+                mun.style.display = 'none';
+                msj1.style.display = 'none';
+                msj2.style.display = 'none';
+            } else {
+                x.style.display = 'block';
+                mun.style.display = 'none';
+                msj1.style.display = 'none';
+                msj2.style.display = 'none';
+            }
+
+            // Obtener el valor del input
+            var texto = document.getElementById("input-texto-encriptado").value;
+            var letra = [];
+            var contador = 1;
+            var text_en="";
+            var nuevoTexto = [];
+            for (var i = 0; i <texto.length; i++) {
+                letra[i] = texto.substring(i,contador);
+
+                if(letra[i]=='a'){
+                    nuevoTexto[i]= "e";
+                }else if(letra[i]=='b'){
+                    nuevoTexto[i]= "j";
+                }else if(letra[i]=='c'){
+                    nuevoTexto[i]= "u";
+                }else if(letra[i]=='d'){
+                    nuevoTexto[i]= "n";
+                }else if(letra[i]=='e'){
+                    nuevoTexto[i]= "w";
+                }else if(letra[i]=='f'){
+                    nuevoTexto[i]= "h";
+                }else if(letra[i]=='g'){
+                    nuevoTexto[i]= "y";
+                }else if(letra[i]=='h'){
+                    nuevoTexto[i]= "a";
+                }else if(letra[i]=='i'){
+                    nuevoTexto[i]= "s";
+                }else if(letra[i]=='j'){
+                    nuevoTexto[i]= "b";
+                }else if(letra[i]=='k'){
+                    nuevoTexto[i]= "r";
+                }else if(letra[i]=='l'){
+                    nuevoTexto[i]= "f";
+                }else if(letra[i]=='m'){
+                    nuevoTexto[i]= "t";
+                }else if(letra[i]=='n'){
+                    nuevoTexto[i]= "c";
+                }else if(letra[i]=='o'){
+                    nuevoTexto[i]= "k";
+                }else if(letra[i]=='p'){
+                    nuevoTexto[i]= "l";
+                }else if(letra[i]=='q'){
+                    nuevoTexto[i]= "g";
+                }else if(letra[i]=='r'){
+                    nuevoTexto[i]= "i";
+                }else if(letra[i]=='s'){
+                    nuevoTexto[i]= "v";
+                }else if(letra[i]=='t'){
+                    nuevoTexto[i]= "x";
+                }else if(letra[i]=='u'){
+                    nuevoTexto[i]= "q";
+                }else if(letra[i]=='v'){
+                    nuevoTexto[i]= "d";
+                }else if(letra[i]=='w'){
+                    nuevoTexto[i]= "z";
+                }else if(letra[i]=='x'){
+                    nuevoTexto[i]= "m";
+                }else if(letra[i]=='y'){
+                    nuevoTexto[i]= "p";
+                }else if(letra[i]=='z'){
+                    nuevoTexto[i]= "o";
+                }else{
+                    nuevoTexto[i]=" ";
+                }
+                contador++; 
+                text_en= text_en+nuevoTexto[i];              
+            }            
+            alert(text_en);            
+            // Imprimir el nuevo texto en el textarea
+            document.getElementById("t-encriptado").value = text_en;            
+        }
+        function desencriptar(){
+                // Obtener el valor del input
+                // Obtener el valor del input
+            var texto = document.getElementById("input-texto-encriptado").value;
+            var letra = [];
+            var contador = 1;
+            var text_en="";
+            var nuevoTexto = [];
+            for (var i = 0; i <texto.length; i++) {
+                letra[i] = texto.substring(i,contador);
+
+                if(letra[i]=='e'){
+                    nuevoTexto[i]= "a";
+                }else if(letra[i]=='j'){
+                    nuevoTexto[i]= "b";
+                }else if(letra[i]=='u'){
+                    nuevoTexto[i]= "c";
+                }else if(letra[i]=='n'){
+                    nuevoTexto[i]= "d";
+                }else if(letra[i]=='w'){
+                    nuevoTexto[i]= "e";
+                }else if(letra[i]=='h'){
+                    nuevoTexto[i]= "f";
+                }else if(letra[i]=='y'){
+                    nuevoTexto[i]= "g";
+                }else if(letra[i]=='a'){
+                    nuevoTexto[i]= "h";
+                }else if(letra[i]=='s'){
+                    nuevoTexto[i]= "i";
+                }else if(letra[i]=='b'){
+                    nuevoTexto[i]= "j";
+                }else if(letra[i]=='r'){
+                    nuevoTexto[i]= "k";
+                }else if(letra[i]=='f'){
+                    nuevoTexto[i]= "l";
+                }else if(letra[i]=='t'){
+                    nuevoTexto[i]= "m";
+                }else if(letra[i]=='c'){
+                    nuevoTexto[i]= "n";
+                }else if(letra[i]=='k'){
+                    nuevoTexto[i]= "o";
+                }else if(letra[i]=='l'){
+                    nuevoTexto[i]= "p";
+                }else if(letra[i]=='g'){
+                    nuevoTexto[i]= "q";
+                }else if(letra[i]=='i'){
+                    nuevoTexto[i]= "r";
+                }else if(letra[i]=='v'){
+                    nuevoTexto[i]= "s";
+                }else if(letra[i]=='x'){
+                    nuevoTexto[i]= "t";
+                }else if(letra[i]=='q'){
+                    nuevoTexto[i]= "u";
+                }else if(letra[i]=='d'){
+                    nuevoTexto[i]= "v";
+                }else if(letra[i]=='z'){
+                    nuevoTexto[i]= "w";
+                }else if(letra[i]=='m'){
+                    nuevoTexto[i]= "x";
+                }else if(letra[i]=='p'){
+                    nuevoTexto[i]= "y";
+                }else if(letra[i]=='o'){
+                    nuevoTexto[i]= "z";
+                }else{
+                    nuevoTexto[i]=" ";
+                }
+                contador++; 
+                text_en= text_en+nuevoTexto[i];              
+            }            
+            alert(text_en);            
+            // Imprimir el nuevo texto en el textarea
+            document.getElementById("t-encriptado").value = text_en; 
+        }
+        function copiar(){
+            var texto = document.getElementById("t-encriptado").value;
+            var input = document.createElement("input");
+            input.value = texto;
+            document.body.appendChild(input);
+            input.select();
+            document.execCommand("copy");
+            input.remove();
+            alert("Texto copiado al portapapeles");
+        }   
+            
+    </script>
+</head>
+<body>
+
+    <div class="logo">
+        <img src="imagenes/Vector.jpg" alt="logo Alura" id="logo-alura">
+    </div>
+    
+    <main>
+        <section class="encriptacion">
+            
+            <div class="ingreso-encriptacion">
+                <input id="input-texto-encriptado" type="text" class="input-texto" required>
+            </div>        
+            <div class="texto-senial">
+                <img src="imagenes/bi_exclamation-circle-fill.png" alt="imagen de advertencia" class="signo-advetencia">
+                <label class="texto-advertencia">Solo letras minúsculas y sin acentos</label>
+            </div>
+            <div class="botones-encriptacion">
+                <button  class="boton-encriptar" onclick="encriptar()"><label id="txt_encriptar">Encriptar</label> </button>
+                <button  class="boton-desencriptar" onclick="desencriptar()"><label id="txt_desencriptar">Desencriptar</label></button>
+            </div>
+        </section>
+        <section class="texto-encriptado">
+            <div class="rectangulo-encriptado">
+                <textarea  id="t-encriptado" name="resultado" class="resultado-encriptacion" readonly></textarea>
+
+                    <div class="muneco">
+                        <img src="imagenes/Muñeco.png" alt="muñeco" class="img-muneco" id="mun">                    
+                    </div>
+                    <div class="mensajes-encriptado">
+                        <label id="msj1" class="mensaje-1">Ningún mensaje fue encontrado</label>
+                        <label id="msj2" class="mensaje-2">Ningún mensaje fue encontrado</label>
+                    </div>
+
+                    <div class="boton-copy">
+                        <button class="boton-copiar" onclick="copiar()"><label id="texto-boton-copiar">Copiar</label></button>
+                    </div>
+                        
+            </div>
+        </section>       
+    </main>
+</body>
+</html>
